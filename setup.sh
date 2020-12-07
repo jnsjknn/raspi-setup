@@ -13,7 +13,8 @@ sed -i "s/raspberrypi/$hostname/" /etc/hostname
 sed -i "s/raspberrypi/$hostname/" /etc/hosts
 echo "[STATUS] Hostname updated"
 echo -e "${RED}REMEMBER TO PRINT A STICKER WITH THE FOLLOWING INFORMATION:"
-cat /proc/device-tree/model
+modelname=$(cat /proc/device-tree/model)
+echo "$modelname"
 echo "username: pi"
 echo "password: <password>"
 echo -e "hostname $hostname"
