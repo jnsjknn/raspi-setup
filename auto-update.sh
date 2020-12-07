@@ -5,7 +5,7 @@ CURRENT_TIME=$( date +%s )
 
 function perform_update {
   sudo apt-get update -y
-  sudo apt dist-upgrade -y
+  sudo apt upgrade -y
   sudo echo "$CURRENT_TIME" >> "$LOGFILE"
 }
 
