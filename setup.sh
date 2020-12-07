@@ -24,11 +24,11 @@ echo -e "${CYAN}[STATUS] Update finished"
 echo "[STATUS] Setting up automatic updates.."
 sudo cp ./auto-update.sh /usr/bin/auto-update.sh
 sudo chmod +x /usr/bin/auto-update.sh
-sudo cp ./weekly-reboot.sh /usr/bin/weekly-reboot.sh
-sudo chmod +x /usr/bin/weekly-reboot.sh
+sudo cp ./weekly-reboot.sh /usr/bin/monthly-reboot.sh
+sudo chmod +x /usr/bin/monthly-reboot.sh
 sudo crontab -l > newCron
 echo "@reboot sudo bash /usr/bin/auto-update.sh &" >> newCron
-echo "0 3 * * * sudo bash /usr/bin/weekly-reboot.sh &" >> newCron
+echo "0 3 * * * sudo bash /usr/bin/monthly-reboot.sh &" >> newCron
 sudo crontab newCron
 sudo rm newCron
 echo "[STATUS] Automatic updates setup"
