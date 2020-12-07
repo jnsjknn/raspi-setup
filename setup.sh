@@ -22,7 +22,7 @@ sleep 4
 echo -e "${CYAN}[STATUS] Looking for updates..${NOCOLOR}"
 sudo apt-get update -y
 echo -e "${CYAN}[STATUS] Starting to update..${NOCOLOR}"
-sudo apt dist-upgrade -y
+sudo apt upgrade -y
 echo -e "${CYAN}[STATUS] Update finished"
 
 echo "[STATUS] Setting up automatic updates.."
