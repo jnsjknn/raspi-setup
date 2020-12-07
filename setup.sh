@@ -37,7 +37,7 @@ sudo crontab newCron
 sudo rm newCron
 echo "[STATUS] Automatic updates setup"
 
-echo "[STATUS] Installing an xrdp-server for Remote Desktop access..${NOCOLOR}"
+echo e- "[STATUS] Installing an xrdp-server for Remote Desktop access..${NOCOLOR}"
 sudo apt-get install xrdp -y
 echo -e "${CYAN}[STATUS] xrdp server installed"
 
