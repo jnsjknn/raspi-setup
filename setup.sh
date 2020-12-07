@@ -12,8 +12,12 @@ read hostname
 sed -i "s/raspberrypi/$hostname/" /etc/hostname
 sed -i "s/raspberrypi/$hostname/" /etc/hosts
 echo "[STATUS] Hostname updated"
-echo -e "${RED}REMEMBER TO ADD A HOSTNAME STICKER TO THE CASE OF THE PI"
-sleep 2
+echo -e "${RED}REMEMBER TO PRINT A STICKER WITH THE FOLLOWING INFORMATION:"
+cat /proc/device-tree/model
+echo "username: pi"
+echo "password: <password>"
+echo -e "hostname $hostname"
+sleep 4
 
 echo -e "${CYAN}[STATUS] Looking for updates..${NOCOLOR}"
 sudo apt-get update -y
